@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Plutus</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+<!-- Header -->
+<div id="top-nav" class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-toggle"></span>
+      </button>
+      <a class="navbar-brand" href="#">Plutus</a>
+    </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="profile.html">My Profile</a></li>
+        <li><a href="logout.php">Logout</a></li>
+      </ul>
+    </div>
+</div>
+<!-- /Header -->
+
+<!-- Main -->
+<div class="container">
+  
+  <!-- upper section -->
+  <div class="row">
+            <!-- tabs left -->
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked" id="myTabs">
+          <li class="active"><a href="#home" data-toggle="pill">Dashboard</a></li>
+          <li><a href="#send" data-toggle="pill"> Pay Money</a></li>
+          <li><a href="#request" data-toggle="pill"> Request Money</a></li>
+          <li><a href="#gift" data-toggle="pill"> Gift Money</a></li>
+          <li><a href="#trans" data-toggle="pill"> My transactions</a></li>
+        </ul>
+      </div>
+
+  <!-- Content -->
+      <div class="col-md-9">
+        <div class="tab-content">
+          <div class="tab-pane active fade in" id="home">
+            <div class="col-md-8">
+              <div class="page-header"><h3>Hi, Utkarsh!</h3></div>
+              You have money 
+              <a href="#" data-toggle="popover" data-placement="bottom" data-content="Money requests are left for you to accept or reject.">requests</a> pending.
+              <hr>
+              Go to <a href="request.html">request fulfillment</a> page
+            </div>
+            <div class="col-md-4">
+              <img src = "wallet.png" width = "200" height="200">
+              <hr>
+              Your wallet balance is Rs. ___
+            </div>
+          </div>
+          <div class="tab-pane fade" id="send">
+            <div class="col-md-8">
+              <div class="page-header">
+                <h4>You can send money to any person in the database from here</h4>
+              </div>
+              <div class="col-sm-6">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" class="form-control" id="username">
+                  </div>
+                  <div class="form-group">
+                    <label for="amount">Amount (in INR):</label>
+                    <input type="text" class="form-control" id="amount">
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-default">Go!</button>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+            <div class="col-md-4">
+              <img src = "rocket-flat.png" width = "200" height="200">
+              <hr>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="request">
+            <div class="page-header">
+              <h4>You can request money from upto 5 people</h4>
+            </div>
+            <div class="col-sm-6">
+              <form role="form">
+                <div class="form-group col-sm-6">
+                  <label for="user1">Person 1</label>
+                  <input type="text" class="form-control" id="user1">
+                </div>
+                <div class="form-group col-sm-6">
+                  <label for="user2">Person 2</label>
+                  <input type="text" class="form-control" id="user2">
+                </div>
+                <div class="form-group col-sm-6">
+                  <label for="user3">Person 3</label>
+                  <input type="text" class="form-control" id="user3">
+                </div>
+                <div class="form-group col-sm-6">
+                  <label for="user4">Person 4</label>
+                  <input type="text" class="form-control" id="user4">
+                </div>
+                <div class="form-group col-sm-6">
+                  <label for="user5">Person 5</label>
+                  <input type="text" class="form-control" id="user5">
+                </div>
+                <div class="form-group col-sm-7">
+                  <label for="amount">Amount (in INR)</label>
+                  <input type="text" class="form-control" id="amount">
+                </div>
+                <div class="form-group col-sm-12">
+                    <button type="submit" class="btn btn-default">Go!</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="gift">
+            <div class="col-md-8">
+              <div class="page-header">
+                <h4>You can gift money to any person in the database from here</h4>
+              </div>
+              <div class="col-sm-6">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="gift_username">Username:</label>
+                    <input type="text" class="form-control" id="gift_username">
+                  </div>
+                  <div class="form-group">
+                    <label for="gift_amount">Amount (in INR):</label>
+                    <input type="text" class="form-control" id="gift_amount">
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-default">Go!</button>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+            <div class="col-md-4">
+              <img src = "gift-flat.png" width = "200" height="200">
+              <hr>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="trans">
+            <div class="page-header">
+              <h4>You can view all your transactions from here.</h4>
+            </div>
+            <div class="col-md-8">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>User</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>madmax</td>
+                    <td>100</td>
+                    <td>20/12/2015</td>
+                  </tr>
+                </tbody>
+
+              </table>
+            </div>
+            <div class="col-md-4">
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover(); 
+});
+</script>
+  <!-- /upper section -->
+  
+  <!-- lower section -->
+  
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
